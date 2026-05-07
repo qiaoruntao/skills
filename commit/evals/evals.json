@@ -1,0 +1,23 @@
+{
+  "skill_name": "commit",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Setup: Create a temp git repo at /tmp/eval-commit-0, add a few Python files (auth.py with a login function, utils.py with helpers, build/output.pyc as a build artifact), then as the user say: \"let's commit the auth work\"",
+      "expected_output": "Only auth.py is staged and committed. build/output.pyc is added to .gitignore, not committed. Commit message is imperative and mentions auth.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Setup: Create a temp git repo at /tmp/eval-commit-1, add files: api/routes.py, api/models.py, frontend/app.js, .env with secrets, node_modules/ directory. Then as the user say: \"commit everything, then we'll open a PR\"",
+      "expected_output": ".env and node_modules are gitignored. Source files (api/routes.py, api/models.py, frontend/app.js) are committed. Because 'open a PR' was mentioned, the result includes the short SHA and commit message.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Setup: Create a temp git repo at /tmp/eval-commit-2, with two unrelated features partially done: payment/stripe.py (payment integration) and notifications/email.py (email feature), plus a tmp/debug.log file. Then as the user say: \"commit just the payment stuff for now\"",
+      "expected_output": "Only payment/stripe.py is staged. notifications/email.py is left unstaged. tmp/debug.log is gitignored. Commit message focuses on payment/stripe integration.",
+      "files": []
+    }
+  ]
+}
