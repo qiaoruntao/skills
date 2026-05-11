@@ -82,8 +82,12 @@ Extract:
   - `blocked` — could not complete, or required major replanning
 - **what_worked**: single most important insight that helped
 - **what_didnt_work**: main friction point or wrong turn (omit if smooth)
-- **next_time**: one concrete action to avoid the friction. Specific and
-  actionable. The most important field. (omit if smooth)
+- **next_time**: one concrete action to avoid the friction. Generalize one
+  level above the exact incident so it applies to future similar work, not only
+  this specific bug. Keep it specific enough to act on. If the first draft names
+  a one-off file, version, command, or dependency, check whether the underlying
+  lesson is about design intent, dependency boundaries, verification order, tool
+  choice, or communication. The most important field. (omit if smooth)
 - **tech_tags**: version-pinned stack labels inferable from context; omit if none
 - **id**: from `date -u +"%Y-%m-%dT%H:%M:%SZ"`
 
