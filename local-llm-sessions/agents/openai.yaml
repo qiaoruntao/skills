@@ -1,0 +1,4 @@
+interface:
+  display_name: "Local LLM Sessions"
+  short_description: "List and fetch local AI coding assistant sessions through CCHV."
+  default_prompt: "List recent local Codex and Claude sessions, then fetch the messages from one selected session."
